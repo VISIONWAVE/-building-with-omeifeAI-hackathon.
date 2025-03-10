@@ -26,7 +26,8 @@ def make_request(endpoint, data):
     
     headers = {
         'Authorization': f'Bearer {KEY}',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/vnd.api+json',
+        'Accept': 'application/vnd.api+json'
     }
 
     """
@@ -38,7 +39,7 @@ def make_request(endpoint, data):
     Send requests
     """
     response = requests.post(full_enpoint, headers=headers, json=data)
-
+    print(response.text)
 
     """
     Return response
