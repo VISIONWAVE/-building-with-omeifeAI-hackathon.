@@ -6,6 +6,10 @@ from rest_framework.response import Response
 
 from api.services import make_request
 
+class Home(APIView):
+    def get(self, request):
+        return Response({"status": "success", "message": "Welcome to DreamWave's Omeife Translator and TTS"})
+
 class Translate(APIView):
     def post(self, request):
         """
@@ -40,7 +44,7 @@ class Translate(APIView):
         """
         Return response
         """
-        return Response({'status': 'success', 'response': required_response}, status=status.HTTP_200_OK)
+        return Response({'status': 'success', 'message': required_response}, status=status.HTTP_200_OK)
     
 class TTS(APIView):
     def post(self, request):
@@ -78,4 +82,4 @@ class TTS(APIView):
         """
         Return response
         """
-        return Response({'status': 'success', 'response': required_response}, status=status.HTTP_200_OK)
+        return Response({'status': 'success', 'message': required_response}, status=status.HTTP_200_OK)
