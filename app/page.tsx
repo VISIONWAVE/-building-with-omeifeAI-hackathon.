@@ -1,4 +1,3 @@
-"use client"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import TranslationForm from "@/components/translation-form"
@@ -22,18 +21,6 @@ export default function Home() {
             <div className="flex gap-2 items-center text-primary">
               <Sparkles className="h-6 w-6" />
               <h1 className="text-xl font-bold">DreamWave Omeife</h1>
-            </div>
-            <div className="flex flex-1 items-center justify-end space-x-4">
-              <nav className="flex items-center space-x-2">
-                <a
-                  href="https://apis.omeife.ai"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-sm font-medium transition-colors hover:text-primary"
-                >
-                  API Docs
-                </a>
-              </nav>
             </div>
           </div>
         </header>
